@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "J4W4TUpOD3mFk4w2Z95dMn71lmLCfbFTnBxQevDX6SE=",
+  "Source": "test-fluent-api",
+  "BasePath": "_content/test-fluent-api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
