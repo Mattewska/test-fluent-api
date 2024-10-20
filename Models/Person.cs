@@ -6,6 +6,7 @@ public class Person
     public int IdRol { get; set; }
     public uint Document { get; set; }
     public string NamePerson { get; set; }
+    public string SecondNamePerson { get; set; }
     public string LastNamePerson { get; set; }
     public DateTime BirthdayPerson { get; set; }
     public string EmailPerson { get; set; }

@@ -28,6 +28,7 @@ public class LoginContext : DbContext
             person.Property(p => p.Document).IsRequired().HasMaxLength(10);
             person.HasOne<Rol>(p => p.Rol).WithMany(r => r.Persons).HasForeignKey(p => p.IdRol);
             person.Property(p => p.NamePerson).IsRequired().HasMaxLength(20);
+            person.Property(p => p.SecondNamePerson).HasMaxLength(20);
             person.Property(p => p.LastNamePerson).IsRequired().HasMaxLength(20);
             person.Property(p => p.BirthdayPerson).IsRequired().HasColumnType("date");
             person.Property(p => p.EmailPerson).IsRequired().HasMaxLength(256);
