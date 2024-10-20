@@ -25,6 +25,7 @@ public class LoginContext : DbContext
             credential.ToTable(c => c.HasCheckConstraint("CK_Email_IsValid", "Email LIKE '%@%'"));
             credential.HasKey(c => c.IdCredentials);
             credential.Property(c => c.Email).IsRequired().HasMaxLength(250);
+            credential.Property(c => c.Password).IsRequired().HasMaxLength(25);
         });
         modelBuilder.Entity<Person>(person =>
         {
