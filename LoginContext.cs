@@ -17,7 +17,6 @@ public class LoginContext : DbContext
             rol.ToTable("Rol");
             rol.HasKey(r => r.IdRol);
             rol.Property(r => r.NameRol).IsRequired().HasMaxLength(10);
-            
         });
         modelBuilder.Entity<Credential>(credential =>
         {
@@ -34,7 +33,7 @@ public class LoginContext : DbContext
             person.Property(p => p.Document).IsRequired().HasMaxLength(10);
             person.HasOne<Rol>(p => p.Rols).WithMany(r => r.Persons).HasForeignKey(p => p.IdRol);
             person.Property(p => p.NamePerson).IsRequired().HasMaxLength(20);
-            person.Property(p => p.SecondNamePerson).HasMaxLength(20);
+            person.Property(p => p.SecondNamePerson).IsRequired(false).HasMaxLength(20);
             person.Property(p => p.LastNamePerson).IsRequired().HasMaxLength(20);
             person.Property(p => p.BirthdayPerson).IsRequired().HasColumnType("date");
             person.HasOne(p => p.Credentials).WithMany(c => c.Credentials).HasForeignKey(p => p.IdCredencial);
