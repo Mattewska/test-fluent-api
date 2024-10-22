@@ -5,7 +5,7 @@ public class Person
     public uint IdPerson { get; set; }
     public int IdRol { get; set; }
     public uint IdCredencial { get; set; }
-    public uint Document { get; set; }
+    public string Document { get; set; }
     public string NamePerson { get; set; }
     public string SecondNamePerson { get; set; }
     public string LastNamePerson { get; set; }
