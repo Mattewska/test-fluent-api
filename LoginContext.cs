@@ -11,18 +11,14 @@ public class LoginContext : DbContext
     
     public LoginContext(DbContextOptions<LoginContext> options) : base(options) {}
     
-    private List<Rol> InitialRolData = [];
-    private List<Credential> InitialCredentialData = [];
-    private List<Person> InitialPersonData = [];
-    private DateTime ActualDateTime = DateTime.Today;
-    
-    
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        InitialRolData.Add(new Rol{IdRol = 1, NameRol = "Admin"});
-        InitialCredentialData.Add(new Credential{ IdCredentials = 1, Email = "admin@gmail.com", Password = "123456" });
-        InitialPersonData.Add(new Person{IdPerson = 1,Document = "1001", IdRol = 1, NamePerson = "Admin", LastNamePerson = "Admin", BirthdayPerson = ActualDateTime, IdCredencial = 1});
         
+        List<Rol> RolsList = new List<Rol>();
+        List<Credential> CredentialsList = new List<Credential>();
+        
+        RolsList.Add(new Rol{IdRol = 1, NameRol = "Admin"});
+        CredentialsList.Add(new Credential{IdCredentials = 1, Email = "adminTest@LoginTest.com", Password = "123456"});
         
         modelBuilder.Entity<Rol>(rol =>
         {
@@ -30,7 +26,6 @@ public class LoginContext : DbContext
             rol.HasKey(r => r.IdRol);
             rol.Property(r => r.IdRol).ValueGeneratedOnAdd();
             rol.Property(r => r.NameRol).IsRequired().HasMaxLength(10);
-            rol.HasData(InitialRolData);
         });
         modelBuilder.Entity<Credential>(credential =>
         {

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("test-fluent-api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df1f6dbd023db8148c68f0781ec7b7f8866a5c5d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a5dad11110dd8bf16196d23b66965bfe61f2a766")]
 [assembly: System.Reflection.AssemblyProductAttribute("test-fluent-api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("test-fluent-api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
